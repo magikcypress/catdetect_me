@@ -1,0 +1,26 @@
+$(function() {
+	var $window = $(window);
+
+	function checkWidth() {
+		var windowsize = $window.width();
+		if (windowsize < 440) {
+			$('.container').addClass('none');
+			$('.alternative_text').removeClass('none');
+		}
+	}
+
+	function updateBg() {
+		// $(".bg_image").fadeOut("slow").load('spip.php?page=bg_image .bg_image_wrapper').fadeIn('slow');
+		$(".bg_image").load( "spip.php?page=bg_image .bg_image_wrapper" );
+	}
+
+	checkWidth();
+	$(window).resize(checkWidth);
+
+	$('.switch_link').click(function() {
+		$('.container').toggle();
+		$('.alternative_text').toggle();
+	});
+
+	setInterval(updateBg,20000);
+});

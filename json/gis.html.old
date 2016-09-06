@@ -1,0 +1,7 @@
+{
+	"type": "Feature",
+	"geometry": {"type": "Point", "coordinates": [[(#ENV{lon})], [(#ENV{lat})]]},
+	"properties": {
+		"title":[(#INCLURE{fond=json/inc_bulle})]
+	}
+}

@@ -1,0 +1,105 @@
+@media all {
+
+	body {	
+		font-family: "LatoWeb";
+		font-size: 12pt;
+		font-style: normal; 
+		padding: 2em;
+		
+	}
+
+	h1 { margin-top: 0 }
+
+	.switch_link {
+		padding: 2em 0.3em;
+		position: absolute;
+		right: 0;
+		top: 0
+	}
+
+	sub { top: 0.5ex }
+
+	.none { display: none; }
+
+	.block { 
+		display: block; 
+		font-weight: bold; 
+		padding-top: .5em 
+	}
+
+	.slash_bg {
+	    background-attachment: fixed;
+	    background-image: url("../prive/themes/spip/images/bg.png");
+	    background-position: center top;
+	    background-repeat: repeat;
+	    height: 100%;
+	    left: 0;
+	    overflow: hidden;
+	    position: fixed;
+	    top: 0;
+	    width: 100%;
+	    z-index: -1
+	}
+
+	.wrapper {
+		position: relative;
+		background-color: rgba(255, 255, 255, 0.5);
+		padding: 2em;
+		width: 450px
+	}
+
+	img.main_fond {
+		-webkit-filter: grayscale(100%);
+		filter: grayscale(100%);
+		left: 50%;
+		min-height: 100%;
+		min-width: 100%;
+		position: fixed;
+		top: 50%;
+		transform: translate(-50%, -50%);
+		z-index: -1
+	}
+
+	.leaflet-popup-content  {
+		font-family: "LatoWeb";
+		font-size: 12pt;
+		font-style: normal;
+	}
+
+	.alternative_text {
+		border-bottom: solid 1px #000;
+	}
+
+	footer { 
+		padding-top: 10px; 
+		text-align: left; 
+	}
+
+	a { color: #000 }
+	a:hover,
+	a:focus,
+	a:active { color: #3b3b3b }
+	a:focus { color: #3b3b3b }
+}
+
+@media only screen 
+and (min-device-width : 320px) 
+and (max-device-width : 480px) {
+	body { padding: 0 }
+
+	h1, footer, .alternative_text {
+		padding: .3em;
+	}
+
+	.switch_link { padding: 0; }
+
+	.wrapper { 
+		width: 80% 
+	}
+
+	.leaflet-popup-content  {
+		font-family: "LatoWeb";
+		font-size: 6pt;
+		font-style: normal;
+	}
+}

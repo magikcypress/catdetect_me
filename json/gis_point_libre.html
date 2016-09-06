@@ -1,0 +1,10 @@
+{
+	"type": "Feature",
+	"geometry": {"type": "Point", "coordinates": [[(#ENV{lon})], [(#ENV{lat})]]},
+	"id":"1",
+	"properties": {
+		[(#SET{description, [(#INCLURE{fond=json/inc_bulle})]})]
+		"title":[(#GET{titre}|?{#GET{titre},''}|json_encode)],
+		"description":[(#GET{description}|?{#GET{description}|wrap{<p>},''}|json_encode)]
+	}
+}

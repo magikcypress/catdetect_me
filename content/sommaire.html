@@ -1,0 +1,39 @@
+<body data-country="#LANG" data-language="#LANG">
+
+<div class="bg_image">
+	<INCLURE{fond=inclure/images_random}>
+</div>
+
+<div class="slash_bg"></div>
+
+<div class="wrapper">
+	<header role="banner">
+		<h1>#NOM_SITE_SPIP <sub>v3</sub></h1>
+		<!--a href="#" title="<:catdetect_me:switch_mode:>" class="switch_link"><img src="#CHEMIN{prive/themes/spip/images/switch.png}" alt="Switch text" /></a--> 
+	</header>
+
+	<main role="main">
+		<section>
+			<div class="container">
+				[(#INCLURE{fond=modeles/carte_gis,
+					objets=point_libre,
+					id_a_ouvrir=1,
+					zoom=10,
+					aucun_controle=oui,
+					lat=[(#REM|catdetect_ip|geoip_informations|table_valeur{7})],
+					lon=[(#REM|catdetect_ip|geoip_informations|table_valeur{8})]})]
+			</div>
+		</section>
+		<section class="alternative_text none">
+			[(#INCLURE{fond=json/inc_bulle})]
+		</section>
+	</main>
+
+	<footer>
+		Cat is a drone <br /> 
+		<a href="https://www.catdetect.me/checkip" title="Use with curl">catdetect.you with curl</a> ~ <a href="https://www.twitter.com/__cyp" title="on Twitter">Follow me</a> <br />
+		<a href="https://www.catdetect.me/v1/" title="Version 1">v1</a> ~ <a href="https://www.catdetect.me/v2/" title="Version 2">v2</a>
+	</footer>
+</div>
+ 
+</body>

@@ -1,0 +1,24 @@
+<paquet
+	prefix="catdetect_me"
+	categorie="outil"
+	version="3.0.0"
+	etat="dev"
+	compatibilite="[3.0.0;3.1.*]"
+	logo="prive/themes/spip/images/catdetect_me-32.png"
+	documentation=""
+>
+
+	<nom>catdetect_me</nom>
+	<!--Ce plugin permet de récupérer des informations sur votre IP-->
+
+	<auteur>cyp</auteur>
+
+	<licence>GNU/GPL</licence>
+
+	<necessite nom="Zcore" />
+	<necessite nom="gis" />
+	<necessite nom="geoip" />
+
+	<pipeline nom="insert_head" inclure="catdetect_me_pipelines.php"/>
+		
+</paquet>
