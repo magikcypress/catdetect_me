@@ -57,6 +57,7 @@
 		position: fixed;
 		top: 50%;
 		transform: translate(-50%, -50%);
+		width: 100%;
 		z-index: -1
 	}
 
@@ -66,9 +67,9 @@
 		font-style: normal;
 	}
 
-	.alternative_text {
-		border-bottom: solid 1px #000;
-	}
+	.alternative_text { border-bottom: solid 1px #000 }
+
+	section { padding-top: .5em }
 
 	footer { 
 		padding-top: 10px; 
