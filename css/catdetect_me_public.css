@@ -67,9 +67,13 @@
 		font-style: normal;
 	}
 
-	.alternative_text { border-bottom: solid 1px #000 }
+	.alternative_text { 
+		border-bottom: solid 1px #000;
+		margin-bottom: .5em;
+		width: 100%
+	}
 
-	section { padding-top: .5em }
+	section { padding-bottom: .5em }
 
 	footer { 
 		padding-top: 10px; 
