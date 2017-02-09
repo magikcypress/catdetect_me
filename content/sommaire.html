@@ -14,17 +14,19 @@
 	<main role="main">
 		<section>
 			<div class="container">
-				[(#INCLURE{fond=modeles/carte_gis,
-					objets=point_libre,
-					id_a_ouvrir=1,
-					zoom=10,
-					aucun_controle=oui,
-					lat=[(#REM|catdetect_ip|geoip_informations|table_valeur{7})],
-					lon=[(#REM|catdetect_ip|geoip_informations|table_valeur{8})]})]
+				[(#SET{lat, [(#REM|catdetect_ip|geoip_informations|table_valeur{7})]})] 
+				[(#SET{lon, [(#REM|catdetect_ip|geoip_informations|table_valeur{8})]})] 
+				<INCLURE{fond=modeles/carte_gis,
+						objets=point_libre,
+						id_a_ouvrir=1,
+						zoom=10,
+						aucun_controle=oui,
+						lat=#GET{lat},
+						lon=#GET{lon}}>
 			</div>
 		</section>
 		<section class="alternative_text none">
-			[(#INCLURE{fond=json/inc_bulle})]
+			<INCLURE{fond=json/inc_bulle}>
 		</section>
 	</main>
 
